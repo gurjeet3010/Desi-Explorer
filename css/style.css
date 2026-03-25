@@ -6,6 +6,12 @@
 
 body {
     background-color: #EDF6F9;
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 /* Navbar */
@@ -222,4 +228,142 @@ body {
 
 .nav-social i:hover::after {
     opacity: 1;
+}
+
+/* Ai integration */
+.ai-box {
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px;
+
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(10px);
+
+    width: 300px;
+    border-radius: 15px;
+    color: white;
+}
+
+.ai-box select, .ai-box button {
+    margin-top: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+.ai-result {
+    margin-top: 15px;
+    padding: 12px;
+
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+
+    font-size: 15px;
+    color: #fff;
+
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.ai-result.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Jaipur Title */
+.city-title {
+    text-align: center;
+    margin-top: 95px;
+    color: white;
+}
+
+.city-title h1 {
+    color: white;
+    font-size: 55px;
+    letter-spacing: 3px;
+}
+
+.city-title p {
+    color: #f1f1f1;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+/* Places layout */
+.city-content {
+    margin: 40px;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+/* Each place block */
+.place {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: rgba(0,0,0,0.2);
+    padding: 20px;
+    border-radius: 15px;
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.35)
+    );
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 25px 30px;
+    margin: 40px 60px;
+    color: white; 
+    gap: 30px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+}
+
+/* Text */
+.place .text {
+    width: 60%;
+}
+
+.place h2 {
+    color: #ffffff;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.place p {
+    color: #dddddd;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+/* Images */
+.images {
+    display: flex;
+    gap: 20px;
+}
+
+.img {
+    height: 180px;
+    width: 180px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+
+    transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }

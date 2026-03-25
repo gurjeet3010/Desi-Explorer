@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaipur - Desi Explorer</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<style>
+    body{
+        background-image: url("images/jaipur/jaipur-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+    }
+</style>
+
+<script>
+    
+</script>
+
+<body>
+
+<!-- SAME NAVBAR -->
+<header>
+    <div class="navbar">
+
+        <div class="nav-destination">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <p class="border">Destinations</p>
+        </div>
+
+        <div class="nav-content">
+            <p class="border"><a href="index.html">Home</a></p>
+            <p class="border"><a href="#">Travel</a></p>
+            <p class="border"><a href="#">Blog</a></p>
+        </div>
+
+        <div class="nav-social">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+
+    </div>
+</header>
+
+<!-- PAGE TITLE -->
+<section class="city-title">
+    <h1>JAIPUR</h1>
+    <p>The Pink City of India</p>
+</section>
+
+<div class="ai-box">
+    <h3>✨ Smart Travel Guide</h3>
+
+    <select id="mood">
+        <option value="">Select your mood</option>
+        <option value="history">History Lover</option>
+        <option value="relax">Relaxation</option>
+        <option value="photo">Photography</option>
+    </select>
+
+    <button onclick="recommendPlace()">Suggest</button>
+
+    <div id="result" class="ai-result"></div>
+</div>
+
+<!-- BLOG SECTION (SAME STYLE) -->
+<section class="city-content">
+
+    <!-- Amer Fort -->
+    <div class="place">
+        <div class="text">
+            <h2>Amer Fort or Amber Fort</h2>
+            <p>Constructed of red sandstone and marble, the attractive, opulent palace is laid out on four levels, each with a courtyard. It consists of the Diwan-e-Aam, or "Hall of Public Audience", the Diwan-e-Khas, or "Hall of Private Audience", the Sheesh Mahal (mirror palace), or Jai Mandir, and the Sukh Niwas where a cool climate is artificially created by winds that blow over a water cascade within the palace. Hence, the Amer Fort is also popularly known as the Amer Palace.</p>
+        </div>
+
+        <div class="images">
+            <div class="img" style="background-image: url('images/jaipur/amer1.jpg')"></div>
+            <div class="img" style="background-image: url('images/jaipur/amer2.jpg')"></div>
+            <div class="img" style="background-image: url('images/jaipur/amer3.jpg')"></div>
+        </div>
+    </div>
+
+    <!-- City Palace -->
+    <div class="place">
+        <div class="text">
+            <h2>City Palace</h2>
+            <p>City Palace in Jaipur is a stunning blend of Rajasthani and Mughal architecture, located in the heart of the Pink City. Built in the 18th century by Maharaja Sawai Jai Singh II, the palace complex houses several impressive structures including the Chandra Mahal and Mubarak Mahal. The intricately designed gateways, courtyards, and gardens offer a glimpse into the opulent lifestyle of Jaipur's royal family. The City Palace also features a museum showcasing royal costumes, manuscripts, and a rich collection of artifacts, making it a significant cultural and historical landmark.</p>
+        </div>
+
+        <div class="images">
+            <div class="img" style="background-image: url('images/jaipur/city1.jpg')"></div>
+            <div class="img" style="background-image: url('images/jaipur/city2.jpg')"></div>
+            <div class="img" style="background-image: url('images/jaipur/city3.jpg')"></div>
+        </div>
+    </div>
+
+    <!-- Jal Mahal -->
+    <div class="place">
+        <div class="text">
+            <h2>Jal Mahal</h2>
+            <p>Jal Mahal, located in Jaipur, Rajasthan, is a stunning palace situated in the middle of Man Sagar Lake. Known for its beautiful Rajput and Mughal architecture, the palace appears to float on the water. Although entry to the palace is restricted, it remains a popular tourist attraction for its scenic beauty and picturesque views, especially at sunrise and sunset.</p>
+        </div>
+
+        <div class="images">
+            <div class="img" style="background-image: url('images/jaipur/jal1.jpg')"></div>
+            <div class="img" style="background-image: url('images/jaipur/jal2.jpg')"></div>
+            <div class="img" style="background-image: url('images/jaipur/jal3.jpg')"></div>
+        </div>
+    </div>
+
+    <!-- Jantar Mantar -->
+    <div class="place">
+        <div class="text">
+            <h2>Jantar Mantar</h2>
+            <p>Jantar Mantar in Jaipur is a remarkable astronomical observatory built in the early 18th century by Maharaja Sawai Jai Singh II. Located near the City Palace and Hawa Mahal, this UNESCO World Heritage site houses the world's largest stone sundial. The observatory features an impressive collection of 19 architectural astronomical instruments, designed to measure time, predict eclipses, and track celestial bodies. The Jantar Mantar stands as a testament to the scientific prowess of its era, blending geometric forms with astronomical precision, making it a must-visit destination for history and science enthusiasts.</p>
+            </div>
+
+            <div class="images">
+            <div class="img" style="background-image: url('images/jaipur/jantar1.jpg')"></div>
+            <div class="img" style="background-image: url('images/jaipur/jantar2.jpg')"></div>
+            <div class="img" style="background-image: url('images/jaipur/jantar3.jpg')"></div>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>
