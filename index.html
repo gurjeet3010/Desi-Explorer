@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desi Explorer</title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- Scroll Button -->
+<button onclick="scrollToTop()" id="topBtn">⬆️</button>
+
+<!-- Modal -->
+<div id="imgModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImg">
+</div>
+
+<!-- Navbar -->
+<header>
+    <div class="navbar">
+
+        <div class="nav-destination">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <p class="border">Destinations</p>
+        </div>
+
+        <div class="nav-content">
+            <p class="border"><a href="index.html">Home</a></p>
+            <p class="border"><a href="travelguide.html">Travel</a></p>
+            <p class="border"><a href="indexblog.html">Blog</a></p>
+        </div>
+
+        <div class="nav-social">
+            <i class="fa-brands fa-instagram border"></i>
+            <i class="fa-brands fa-facebook border"></i>
+            <i class="fa-brands fa-twitter border"></i>
+            <i class="fa-solid fa-phone border"></i>
+        </div>
+        
+    </div>
+
+    <div class="nav-logo-area border">
+        <div class="logo-area-left border">
+            <i class="fa-solid fa-map-pin"></i>
+            <p><a href="travelguide.html">Travel Guides</a></p>
+        </div>
+
+        <div class="logo">
+            <p>DESI EXPLORERS</p>
+        </div>
+
+        <div class="logo-area-right border">
+            <i class="fa-regular fa-heart"></i>
+            <p><a href="aboutus.html">About Us</a></p>
+        </div>
+    </div>
+</header>
+
+<!-- Cities Section -->
+<section class="images">
+    <div class="image-section">
+
+        <div class="box">
+            <div class="box-content">
+                <div class="box-image" style="background-image: url('images/jabalpur.jpg')"></div>
+                <h2>JABALPUR</h2>
+                <p><a href="jabalpur.html">See more</a></p> 
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-content">
+                <div class="box-image" style="background-image: url('images/jaipur.jpg')"></div>
+                <h2>JAIPUR</h2>
+                <p><a href="jaipur.html">See more</a></p> 
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-content">
+                <div class="box-image" style="background-image: url('images/mumbai.jpg')"></div>
+                <h2>MUMBAI</h2>
+                <p><a href="#">See more</a></p> 
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-content">
+                <div class="box-image" style="background-image: url('images/delhi.jpg')"></div>
+                <h2>DELHI</h2>
+                <p><a href="#">See more</a></p> 
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="box-content">
+                <div class="box-image" style="background-image: url('images/amritsar.jpg')"></div>
+                <h2>AMRITSAR</h2>
+                <p><a href="#">See more</a></p> 
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Community Feed -->
+<section class="community-feed">
+    <div class="feed-title">
+        <p class="tag"><span class="hash"># </span> DESIEXPLORERS</p>
+    </div>
+
+    <p class="content">Tag #desiexplorers to get featured.</p>
+
+    <div class="feed-images">
+        <div class="feed-box" style="background-image: url('images/feed/feed1.jpg');"></div>
+        <div class="feed-box" style="background-image: url('images/feed/feed2.jpg');"></div>
+        <div class="feed-box" style="background-image: url('images/feed/feed3.jpg');"></div>
+        <div class="feed-box" style="background-image: url('images/feed/feed4.jpg');"></div>
+        <div class="feed-box" style="background-image: url('images/feed/feed5.jpg');"></div>
+        <div class="feed-box" style="background-image: url('images/feed/feed6.jpg');"></div>
+        <div class="feed-box" style="background-image: url('images/feed/feed7.jpg');"></div>
+        <div class="feed-box" style="background-image: url('images/feed/feed8.jpg');"></div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
