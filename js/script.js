@@ -32,13 +32,38 @@ function recommendPlace() {
     const mood = document.getElementById("mood").value;
     const result = document.getElementById("result");
 
+    // remove old highlights
+    document.querySelectorAll(".place").forEach(p => {
+        p.classList.remove("highlight");
+    });
+
+    let targetId = "";
+    let text = "";
+
     if (mood === "history") {
-        result.innerText = "👉 Visit Amer Fort & City Palace 🏰";
+        targetId = "amer";
+        text = "🏰 Showing Amer Fort for history lovers!";
     } else if (mood === "relax") {
-        result.innerText = "👉 Visit Jal Mahal 🌊";
+        targetId = "jal";
+        text = "🌊 Showing Jal Mahal for relaxation!";
     } else if (mood === "photo") {
-        result.innerText = "👉 Visit Hawa Mahal & Patrika Gate 📸";
+        targetId = "city";
+        text = "📸 Showing City Palace for photography!";
     } else {
         result.innerText = "⚠️ Please select a mood!";
+        return;
     }
+
+    result.innerText = text;
+
+    const target = document.getElementById(targetId);
+
+    // highlight
+    target.classList.add("highlight");
+
+    // scroll smoothly
+    target.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
 }
