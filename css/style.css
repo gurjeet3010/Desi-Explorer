@@ -302,11 +302,16 @@ body {
 
 /* Places layout */
 .city-content {
-    margin: 40px;
-    padding-bottom: 50px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
 }
 body.jaipur::before,
 body.jabalpur::before,
+body.goa::before,
+body.manali::before,
+body.amritsar::before,
+body.delhi::before,
 body.mumbai::before {
     content: "";
     position: fixed;
@@ -324,7 +329,7 @@ body.mumbai::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     background-color: rgba(0,0,0,0.2);
     padding: 20px;
     border-radius: 15px;
