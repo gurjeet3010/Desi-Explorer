@@ -109,7 +109,12 @@ body {
     overflow: hidden;
     background-color: #eaecee;
     box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    transition: transform 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.box[style*="display: none"] {
+    opacity: 0;
+    transform: scale(0.95);
 }
 
 .box-content {
@@ -234,54 +239,66 @@ body {
     opacity: 1;
 }
 
-/* Ai integration */
-.ai-box {
-    margin: 30px auto;
+/* Search box */
+.search-container {
     text-align: center;
-    padding: 20px;
-
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(10px);
-
-    width: 300px;
-    border-radius: 15px;
-    color: white;
+    margin: 40px 0;
 }
 
-.ai-box select, .ai-box button {
-    margin-top: 10px;
-    padding: 8px;
-    border-radius: 5px;
+.search-container input {
+    width: 60%;
+    max-width: 400px;
+    padding: 12px 15px;
+    border-radius: 25px;
     border: none;
+    outline: none;
+    font-size: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    background: rgba(69, 65, 65, 0.1);
+    backdrop-filter: blur(10px);
+    color: #090808b3;
 }
 
-.ai-result {
-    margin-top: 15px;
-    padding: 12px;
-
-    background: rgba(255,255,255,0.1);
-    border-radius: 10px;
-
-    font-size: 15px;
-    color: #fff;
-
-    opacity: 0;
-    transform: translateY(10px);
-    transition: all 0.4s ease;
+.search-container input::placeholder {
+    color: #090808b3;
+}
+.filter-container {
+    text-align: center;
+    margin: 25px 0;
 }
 
-.ai-result.show {
-    opacity: 1;
-    transform: translateY(0);
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px 0 10px;
+    flex-wrap: wrap;
 }
 
-.highlight {
-    outline: 3px solid #ffd166;
-    transform: scale(1.02);
-    transition: all 0.3s ease;
+.filter-container button {
+    padding: 8px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: #ffffff;          
+    color: #333;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.25s ease;
 }
 
-/* Jaipur Title */
+.filter-container button:hover {
+    background: #006D77;         
+    color: white;
+    transform: translateY(-2px);
+}
+
+.filter-container button.active {
+    background: #006D77;
+    color: #fcfdfd;
+    border-color: #006D77;
+}
+
+/* City Title */
 .city-title {
     text-align: center;
     margin-top: 95px;
@@ -342,7 +359,7 @@ body.mumbai::before {
     -webkit-backdrop-filter: blur(12px);
     border-radius: 20px;
     padding: 25px 30px;
-    margin: 40px auto;
+    margin: 20px auto;
     width: 85%;
     color: white; 
     gap: 30px;

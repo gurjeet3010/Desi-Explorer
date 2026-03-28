@@ -7,6 +7,7 @@
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -31,7 +32,6 @@
 
         <div class="nav-content">
             <p class="border"><a href="index.html">Home</a></p>
-            <p class="border"><a href="travelguide.html">Travel</a></p>
             <p class="border"><a href="indexblog.html">Blog</a></p>
         </div>
 
@@ -61,11 +61,31 @@
     </div>
 </header>
 
+<div class="search-container">
+    <input 
+        type="text" 
+        id="search" 
+        placeholder="Search cities..." 
+        onkeyup="searchCity()"
+        >
+
+</div>
+<div class="filter-container">
+    <button onclick="filterCities('all', event)">All</button>
+    <button onclick="filterCities('historical', event)">Historical</button>
+    <button onclick="filterCities('spiritual', event)">Spiritual</button>
+    <button onclick="filterCities('nature', event)">Nature</button>
+    <button onclick="filterCities('fun', event)">Fun</button>
+</div>
+<p id="noResults" style="display:none; text-align:center; margin-top:20px;">
+    No cities found 😔
+</p>
+
 <!-- Cities Section -->
 <section class="images">
     <div class="image-section">
 
-        <div class="box">
+        <div class="box" data-category="nature">
             <div class="box-content">
                 <div class="box-image" style="background-image: url('images/jabalpur.jpg')"></div>
                 <h2>JABALPUR</h2>
@@ -73,15 +93,15 @@
             </div>
         </div>
 
-        <div class="box">
-            <div class="box-content">
+        <div class="box" data-category="historical">
+            <div class="box-content" >
                 <div class="box-image" style="background-image: url('images/jaipur.jpg')"></div>
                 <h2>JAIPUR</h2>
                 <p><a href="jaipur.html">See more</a></p> 
             </div>
         </div>
 
-        <div class="box">
+        <div class="box" data-category="fun">
             <div class="box-content">
                 <div class="box-image" style="background-image: url('images/mumbai.jpg')"></div>
                 <h2>MUMBAI</h2>
@@ -89,7 +109,7 @@
             </div>
         </div>
 
-        <div class="box">
+        <div class="box" data-category="historical">
             <div class="box-content">
                 <div class="box-image" style="background-image: url('images/delhi.jpg')"></div>
                 <h2>DELHI</h2>
@@ -97,7 +117,7 @@
             </div>
         </div>
 
-        <div class="box">
+        <div class="box" data-category="spiritual">
             <div class="box-content">
                 <div class="box-image" style="background-image: url('images/amritsar.jpg')"></div>
                 <h2>AMRITSAR</h2>
@@ -105,7 +125,7 @@
             </div>
         </div>
 
-        <div class="box">
+        <div class="box" data-category="fun">
             <div class="box-content">
                 <div class="box-image" style="background-image: url('images/goa.jpg')"></div>
                 <h2>GOA</h2>
@@ -113,7 +133,7 @@
             </div>
         </div>
 
-        <div class="box">
+        <div class="box" data-category="nature">
             <div class="box-content">
                 <div class="box-image" style="background-image: url('images/manali.jpg')"></div>
                 <h2>MANALI</h2>
@@ -121,7 +141,7 @@
             </div>
         </div>
 
-        <div class="box">
+        <div class="box" data-category="spiritual">
             <div class="box-content">
                 <div class="box-image" style="background-image: url('images/varanasi.jpg')"></div>
                 <h2>VARANASI</h2>
@@ -152,7 +172,7 @@
     </div>
 </section>
 
-<script src="script.js"></script>
+<script src="js/script.js" defer></script>
 
 </body>
 </html>

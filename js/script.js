@@ -1,69 +1,39 @@
-// Scroll to top button
-const topBtn = document.getElementById("topBtn");
+function searchCity() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let cards = document.querySelectorAll(".box");
+    let found = false;
 
-window.onscroll = function () {
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
-    }
-};
+    cards.forEach(card => {
+        let text = card.innerText.toLowerCase();
 
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-}
-
-// Image modal (click image to zoom)
-const modal = document.getElementById("imgModal");
-const modalImg = document.getElementById("modalImg");
-
-document.querySelectorAll(".img").forEach(img => {
-    img.addEventListener("click", () => {
-        modal.style.display = "block";
-        modalImg.src = img.style.backgroundImage.slice(5, -2);
-    });
-});
-
-function closeModal() {
-    modal.style.display = "none";
-}
-
-function recommendPlace() {
-    const mood = document.getElementById("mood").value;
-    const result = document.getElementById("result");
-
-    // remove old highlights
-    document.querySelectorAll(".place").forEach(p => {
-        p.classList.remove("highlight");
+        if (text.includes(input)) {
+            card.style.display = "";
+            found = true;
+        } else {
+            card.style.display = "none";
+        }
     });
 
-    let targetId = "";
-    let text = "";
+    document.getElementById("noResults").style.display = found ? "none" : "block";
+}
 
-    if (mood === "history") {
-        targetId = "amer";
-        text = "🏰 Showing Amer Fort for history lovers!";
-    } else if (mood === "relax") {
-        targetId = "jal";
-        text = "🌊 Showing Jal Mahal for relaxation!";
-    } else if (mood === "photo") {
-        targetId = "city";
-        text = "📸 Showing City Palace for photography!";
-    } else {
-        result.innerText = "⚠️ Please select a mood!";
-        return;
-    }
+function filterCities(category, event) {
+    let cards = document.querySelectorAll(".box");
+    let buttons = document.querySelectorAll(".filter-container button");
 
-    result.innerText = text;
+    // remove active class
+    buttons.forEach(btn => btn.classList.remove("active"));
 
-    const target = document.getElementById(targetId);
+    // add active class
+    event.target.classList.add("active");
 
-    // highlight
-    target.classList.add("highlight");
+    cards.forEach(card => {
+        let cardCategory = card.getAttribute("data-category");
 
-    // scroll smoothly
-    target.scrollIntoView({
-        behavior: "smooth",
-        block: "center"
+        if (category === "all" || cardCategory === category) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
     });
 }
